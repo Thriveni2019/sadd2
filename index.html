@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Reader</title>
+    <link href='https://fonts.googleapis.com/css?family=Mukta' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .img1 {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            min-height: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-sizing:border-box;
+           box-shadow: 0px 10px 20px 5px rgba(160, 248, 248, 0.7);
+            /* box-shadow: 0px 10px 20px 2px rgba(8, 7, 7, 0.1); */
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+       
+        #text{
+            font-size: 20px;
+            line-height: 2.5;
+            min-height: 100%;
+            min-width: 100%;
+            border: 0px solid;
+            font-family: 'Mukta';
+        }
+        #text1::-moz-selection {
+  /* background-color: var(--neon-border-color); */
+  color: var(--neon-text-color);
+}
+
+#text1::selection {
+  /* background-color: var(--neon-border-color); */
+  color: var(--neon-text-color);
+}
+
+#text1:focus {
+  outline: none;
+}
+        .btn{
+            border: 3px solid;
+            height: 1.2cm;
+            /* width: 4cm; */
+            background-color:black;
+            border-radius: 0.5cm;
+            border-color:  rgba(160, 248, 248, 0.7);
+            color: white;
+            /* text-align:center; */
+            align-items:center;
+            justify-content:center;
+            /* position:absolute; */
+            font-size: large;
+            font-weight:800;
+            /* margin-top: 2cm; */
+            /* margin-left: 15cm;  */
+
+            transition-property: transform;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+            transition-delay: 0s;
+            /* transition : transform 0.3s ease 0s   -- we can use all 4 properties in a single line*/
+            transition: background-color 0.6s,color 0.9s;
+        }
+       
+        .btn:hover{
+            transform: translateY(-5px);
+            background-color: white;
+            color: black;
+            border-color: black;
+        }
+        
+
+        #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -4;
+      }
+      .img1{
+        width:800px;
+      }
+     
+        
+    </style>
+</head>
+<body>
+    <script src="particles.js"></script>
+    
+
+    <div>
+        <center>
+           <img src="comic8.jpg" class="img1"/>
+        </center>
+    </div>
+    <div id="url"></div>
+    <div id="particles-js"></div>
+    <script>
+        particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+
+    size: {
+      value: 10,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 500,
+        size_min: 0.5,
+        sync: false,
+      },
+    },
+
+  },
+});
+</script>
+</body>
+</html>
